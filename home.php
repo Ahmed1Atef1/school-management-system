@@ -127,23 +127,27 @@ require_once BASE_PATH . '/includes/header.php';
         ['href' => 'modules/admin/students/index.php',  'img' => 'assets/images/students.jpg',  'icon' => 'bi-people-fill',    'css' => 'students',   'label' => 'Students',   'desc' => 'Records and contact details.',    'count' => $stats['students']],
         ['href' => 'modules/admin/teachers/index.php',  'img' => 'assets/images/teachers.jpg',  'icon' => 'bi-person-video3',  'css' => 'teachers',   'label' => 'Teachers',   'desc' => 'Subjects and contact details.',   'count' => $stats['teachers']],
         ['href' => 'modules/admin/classrooms/index.php','img' => 'assets/images/classes.jpg',   'icon' => 'bi-door-open-fill', 'css' => 'classrooms', 'label' => 'Classrooms', 'desc' => 'Rooms, locations, capacity.',     'count' => $stats['classrooms']],
-        ['href' => 'modules/admin/courses/index.php',   'img' => 'assets/images/classes.jpg',   'icon' => 'bi-journal-bookmark-fill', 'css' => 'primary', 'label' => 'Courses', 'desc' => 'Subjects and teacher assignments.','count' => $stats['courses']],
-        ['href' => 'modules/admin/users/index.php',     'img' => 'assets/images/users.jpg',     'icon' => 'bi-person-gear',    'css' => 'users',      'label' => 'Users',      'desc' => 'Accounts and access roles.',     'count' => $stats['users']],
+        ['href' => 'modules/admin/courses/index.php',   'img' => 'assets/images/courses.png',   'icon' => 'bi-journal-bookmark-fill', 'css' => 'primary', 'label' => 'Courses', 'desc' => 'Subjects and teacher assignments.','count' => $stats['courses']],
+        ['href' => 'modules/admin/users/index.php',     'img' => 'assets/images/users_new.png', 'icon' => 'bi-person-gear',    'css' => 'users',      'label' => 'Users',      'desc' => 'Accounts and access roles.',     'count' => $stats['users']],
     ];
     foreach ($adminModules as $mod): ?>
     <div class="col-md-6 col-xl-3">
-        <a class="card h-100 module-card text-decoration-none" href="<?= app_url($mod['href']); ?>">
-            <img src="<?= app_url($mod['img']); ?>" class="card-img-top module-img" alt="<?= $mod['label']; ?>">
-            <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start gap-3">
+        <a class="card h-100 module-card text-decoration-none text-white border-0" href="<?= app_url($mod['href']); ?>" style="min-height: 250px;">
+            <img src="<?= app_url($mod['img']); ?>" class="card-img h-100 w-100" alt="<?= $mod['label']; ?>" style="object-fit: cover;">
+            
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-4" style="background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.6) 60%, transparent 100%); border-radius: 28px;">
+                <div class="d-flex justify-content-between align-items-end w-100">
                     <div>
-                        <span class="module-icon module-icon-<?= $mod['css']; ?>">
+                        <span class="module-icon module-icon-<?= $mod['css']; ?> mb-2 d-inline-flex align-items-center justify-content-center" style="box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                             <i class="bi <?= $mod['icon']; ?>"></i>
                         </span>
-                        <h5 class="card-title mb-1"><?= $mod['label']; ?></h5>
-                        <p class="card-text text-muted mb-0"><?= $mod['desc']; ?></p>
+                        <h4 class="card-title mb-1 fw-bold" style="color: #ffffff !important; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"><?= $mod['label']; ?></h4>
+                        <p class="card-text mb-0" style="color: #e2e8f0 !important; font-size: 0.95rem; text-shadow: 0 1px 3px rgba(0,0,0,0.5);"><?= $mod['desc']; ?></p>
                     </div>
-                    <span class="module-count"><?= $mod['count']; ?></span>
+                    
+                    <span class="rounded-pill fw-bold d-flex align-items-center justify-content-center" style="background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(4px); color: #0f172a !important; font-size: 1rem; width: 36px; height: 36px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                        <?= $mod['count']; ?>
+                    </span>
                 </div>
             </div>
         </a>

@@ -23,7 +23,7 @@ CREATE TABLE `achievements` (
 --
 
 LOCK TABLES `achievements` WRITE;
-INSERT INTO `achievements` VALUES (1,'Top Performer','Scored 90%+ on any major quiz or homework assignment.','bi-trophy-fill','warning',100,'2026-05-23 14:51:24'),(2,'Perfect Week','Maintained 100% attendance streak for 7 consecutive days.','bi-calendar-check-fill','success',75,'2026-05-23 14:51:24'),(3,'Lightning Learner','Completed 5 modules or self-study chapters.','bi-lightning-fill','primary',50,'2026-05-23 14:51:24'),(4,'LMS Settler','Completed your very first assignment submission on EduPanel.','bi-check2-circle','success',25,'2026-05-23 14:51:24'),(5,'Academic Legend','Reached Level 8 in the portal system.','bi-mortarboard-fill','primary',200,'2026-05-23 14:51:24'),(6,'Star Pupil','Achieved a perfect score (100%) on any test.','bi-star-fill','warning',150,'2026-05-23 14:51:24'),(7,'Steadfast Scholar','Maintained a solid 5-day streak of perfect attendance.','bi-activity','info',50,'2026-05-23 14:51:24');
+INSERT INTO `achievements` VALUES (1,'Top Performer','Scored 90%+ on any major quiz or homework assignment.','bi-trophy-fill','warning',100,'2026-05-23 14:51:24'),(2,'Perfect Week','Maintained 100% attendance streak for 7 consecutive days.','bi-calendar-check-fill','success',75,'2026-05-23 14:51:24'),(3,'Lightning Learner','Completed 5 modules or self-study chapters.','bi-lightning-fill','primary',50,'2026-05-23 14:51:24'),(4,'LMS Settler','Completed your very first assignment submission on LearnSphere.','bi-check2-circle','success',25,'2026-05-23 14:51:24'),(5,'Academic Legend','Reached Level 8 in the portal system.','bi-mortarboard-fill','primary',200,'2026-05-23 14:51:24'),(6,'Star Pupil','Achieved a perfect score (100%) on any test.','bi-star-fill','warning',150,'2026-05-23 14:51:24'),(7,'Steadfast Scholar','Maintained a solid 5-day streak of perfect attendance.','bi-activity','info',50,'2026-05-23 14:51:24');
 UNLOCK TABLES;
 
 --
@@ -367,3 +367,4 @@ UNLOCK TABLES;
 
 
 -- Dump completed on 2026-05-23 20:35:47
+

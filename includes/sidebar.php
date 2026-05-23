@@ -1,11 +1,11 @@
-<?php
+﻿<?php
 /**
- * sidebar.php — Role-based left sidebar for the dashboard layout.
+ * sidebar.php â€” Role-based left sidebar for the dashboard layout.
  *
  * Navigation is fully segmented by role:
- *   admin   → Full platform management + administration
- *   teacher → Classroom-focused tools (students, attendance, grades, etc.)
- *   student → Learner-focused tools (courses, grades, achievements, etc.)
+ *   admin   â†’ Full platform management + administration
+ *   teacher â†’ Classroom-focused tools (students, attendance, grades, etc.)
+ *   student â†’ Learner-focused tools (courses, grades, achievements, etc.)
  *
  * Placeholder links use modules/placeholder.php?module=Name
  * until their real pages are implemented.
@@ -27,22 +27,22 @@ if (!function_exists('ph')) {
 ?>
 <aside class="app-sidebar" id="appSidebar" data-role="<?= htmlspecialchars($currentRole); ?>">
 
-    <!-- ── Brand ─────────────────────────────────── -->
+    <!-- â”€â”€ Brand â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
     <div class="sidebar-brand">
-        <a href="<?= app_url('home.php'); ?>" class="sidebar-brand-link" aria-label="EduPanel Home">
+        <a href="<?= app_url('home.php'); ?>" class="sidebar-brand-link" aria-label="LearnSphere Home">
             <span class="sidebar-brand-icon">
                 <i class="bi bi-mortarboard-fill"></i>
             </span>
-            <span class="sidebar-brand-name">EduPanel</span>
+            <span class="sidebar-brand-name">LearnSphere</span>
         </a>
     </div>
 
-    <!-- ── Navigation ────────────────────────────── -->
+    <!-- â”€â”€ Navigation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
     <nav class="sidebar-nav" id="sidebarNav" aria-label="Main navigation">
 
-        <!-- ════════════════════════════════════════
+        <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
              SHARED: Dashboard (all roles)
-             ════════════════════════════════════════ -->
+             â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
         <div class="sidebar-section-label">Main</div>
 
         <a href="<?= app_url('home.php'); ?>"
@@ -54,9 +54,9 @@ if (!function_exists('ph')) {
 
         <?php if ($isLoggedIn): ?>
 
-        <?php /* ════════════════════════════════════════
+        <?php /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
                  ADMIN NAVIGATION
-                 ════════════════════════════════════════ */ ?>
+                 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */ ?>
         <?php if ($currentRole === 'admin'): ?>
 
             <div class="sidebar-section-label">Management</div>
@@ -121,9 +121,9 @@ if (!function_exists('ph')) {
 
         <?php endif; /* end admin */ ?>
 
-        <?php /* ════════════════════════════════════════
+        <?php /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
                  TEACHER NAVIGATION
-                 ════════════════════════════════════════ */ ?>
+                 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */ ?>
         <?php if ($currentRole === 'teacher'): ?>
 
             <div class="sidebar-section-label">Classroom</div>
@@ -172,9 +172,9 @@ if (!function_exists('ph')) {
 
         <?php endif; /* end teacher */ ?>
 
-        <?php /* ════════════════════════════════════════
+        <?php /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
                  STUDENT NAVIGATION
-                 ════════════════════════════════════════ */ ?>
+                 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */ ?>
         <?php if ($currentRole === 'student'): ?>
 
             <div class="sidebar-section-label">Learning</div>
@@ -249,7 +249,7 @@ if (!function_exists('ph')) {
 
     </nav>
 
-    <!-- ── User Footer ───────────────────────────── -->
+    <!-- â”€â”€ User Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
     <div class="sidebar-footer">
         <div class="sidebar-user-info">
             <div class="sidebar-user-avatar sidebar-avatar-<?= role_color($currentRole); ?>">
@@ -279,6 +279,7 @@ if (!function_exists('ph')) {
 
 </aside>
 
-<!-- Mobile overlay — closes sidebar when tapped outside -->
+<!-- Mobile overlay â€” closes sidebar when tapped outside -->
 <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
 

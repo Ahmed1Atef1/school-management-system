@@ -21,7 +21,7 @@ function is_nav_active(string $pathKeyword): string
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>School Management System</title>
+    <title>LearnSphere</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

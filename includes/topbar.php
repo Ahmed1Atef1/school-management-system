@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 /**
- * topbar.php — Sticky top bar for the dashboard layout.
+ * topbar.php â€” Sticky top bar for the dashboard layout.
  * Requires: session started, app_url() available.
  */
 ?>
@@ -17,7 +17,7 @@
         </button>
 
         <nav class="topbar-breadcrumb d-none d-md-flex" aria-label="Breadcrumb">
-            <span class="topbar-breadcrumb-app">EduPanel</span>
+            <span class="topbar-breadcrumb-app">LearnSphere</span>
             <span class="topbar-breadcrumb-sep"><i class="bi bi-chevron-right"></i></span>
             <span class="topbar-breadcrumb-page" id="topbarPageTitle">Dashboard</span>
         </nav>
@@ -87,4 +87,5 @@
     </div>
 
 </header>
+
 

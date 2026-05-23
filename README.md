@@ -10,11 +10,11 @@ A simple school management system built with PHP, MySQL, and Bootstrap. This pro
 -   User Authentication (Login, Register, Logout)
 
 ## Setup Instructions
-1.  Clone the repository.
-2.  Import the database using the provided `.sql` file (you should create and export one).
-3.  Rename `conect.php.example` to `conect.php`.
-4.  Update the database credentials in `conect.php`.
-5.  Place the project in your web server's root directory (e.g., `htdocs` for XAMPP).
+1. Clone the repository.
+2. Place the project in your web server root directory, for example `htdocs` for XAMPP.
+3. Import `database/school_management.sql` into phpMyAdmin.
+4. Update database credentials in `config/connect.php` if needed.
+5. Open `http://localhost/School-Management/`.
 
 Photos
 <img width="654" height="551" alt="image" src="https://github.com/user-attachments/assets/26aae955-47d3-4d75-986a-56ead5731aea" />
